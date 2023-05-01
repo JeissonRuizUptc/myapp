@@ -1,0 +1,26 @@
+.formLogin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10%;
+    padding: 1rem;
+    background-color: #E4DCCF;
+    border-radius: 10%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+img {
+    width: 10rem;
+    height: 10rem;
+}
+
+p {
+    text-align: left;
+}
+
+a {
+    display: flex;
+    text-align: left;
+}
+

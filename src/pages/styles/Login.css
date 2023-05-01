@@ -1,0 +1,23 @@
+.Login{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #F0EBE3;
+}
+
+.Login-form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.Login-image{
+    width: 50%;
+    height: 100%;
+}
+
+.Login-image img{
+    width: 100%;
+    height: 100%;
+}
