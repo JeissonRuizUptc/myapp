@@ -1,6 +1,7 @@
 import React from "react";
 import './styles/FormLogin.css';
 import tortuga from '../pages/resources/tortuga.png'
+import { Link } from "react-router-dom";
 
 const FormLogin = () => {
     return (
@@ -21,9 +22,9 @@ const FormLogin = () => {
 
 
                 <div className="divButton">
-                    <a href="https://www.google.com/webhp?hl=es&ictx=2&sa=X&ved=0ahUKEwiUzcan_dT-AhWaTjABHWFeBEoQPQgJ">
+                    <Link to="/register">
                         <button className="btn btn-secondary">Entrar</button>
-                    </a>
+                    </Link>
                     
                 </div>
 
