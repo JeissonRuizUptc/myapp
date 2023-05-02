@@ -1,7 +1,7 @@
 import React from "react";
 import  './styles/Register.css';
 import FormRegister from "../components/FormRegister";
-import wallpaper from './resources/wallpaper.jpg';
+import wallpaper from './resources/wallpaperRegister.png';
 
 const Register = () => {
     return (
