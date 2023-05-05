@@ -20,7 +20,7 @@ const FormLogin = () => {
         var txtusu = document.getElementById("txtusu").value;
         var txtpas = document.getElementById("txtpas").value;
         if(txtusu.leng===0 || txtpas===0){
-            alert("llene los campos perezoso de mrda")
+            alert("llene los campos")
         }else{
             if(userValidator(txtusu, txtpas)){
                 setLogin("true");
@@ -67,8 +67,9 @@ const FormLogin = () => {
                     <input type="submit" className="btn btn-secondary" value="Enviar" onClick={onSubmit}/>
                     
                 </div>
-
-                <a href="">Registrarse</a>
+                <Link to={'/register'}>
+                    <a href="">Registrarse</a>
+                </Link>   
                 <a href="">Olvide mi contraseña</a>
             </form>
 

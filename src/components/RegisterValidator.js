@@ -1,12 +1,13 @@
 import axios from "axios";
 
- const userValidator = (username, password) =>{
+ const registerValidator = (username, surname, email, password) =>{
     try{
         const response =  axios({
-            url:"http://192.190.42.194:5003/api/Users/login",
+            url:"http://192.190.42.194:5003/api/Users/Register",
             method: 'POST',
             data: {
-                "email": username,
+                "fullname": username + " " + surname,
+                "email": email,
                 "password": password
             }
         }).then(response => console.log(response.status))
@@ -16,4 +17,4 @@ import axios from "axios";
     
 }
 
-export {userValidator};
+export {registerValidator};

@@ -6,18 +6,6 @@ import axios from 'axios';
 
 const Login = () => {
 
-    const baseUrl = 'http://192.190.42.194:5003/api/Users/Register'
-
-    const getAll = () => {
-        const request = axios.get(baseUrl)
-        return request.then(response => response.datos)
-    }
-
-    const datos = [
-        { username: 'dany', name: 'daniel', surname: 'ruiz', correo: 'example@gmail.com', password: 123},
-        { username: 'jei', name: 'jeisson', surname: 'lizarazo', correo: 'example2@gmail.com', password: 123}
-    ]
-
     return (
         <div>
             <div className="Login">
