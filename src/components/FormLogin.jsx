@@ -13,7 +13,7 @@ const FormLogin = () => {
     
     
 
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const {register, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmit = (e) => {
         e.preventDefault();
@@ -24,9 +24,9 @@ const FormLogin = () => {
         }else{
             if(userValidator(txtusu, txtpas)){
                 setLogin("true");
-                alert("Login exitoso");
+                console.log("Login exitoso");
             }else{
-                alert("Login paila mi pez");
+                console.log("Login recibido");
                 document.getElementById("txtusu").value = "";
                 document.getElementById("txtpas").value = "";
                 document.getElementById("txtusu").focus();
@@ -51,20 +51,40 @@ const FormLogin = () => {
 
                 <label htmlFor="">Usuario</label>
                 <div className="inputName">
-                    <input name="username" id="txtusu" type="text" onChange={(e)=>setUsu(e.target.value)} className="form-control" {...register('username', {
-                        required: true,
-                    })} />
+                    <input name="username" id="txtusu" type="text"  className="form-control" {...register(
+                        'username', {
+                        required: {
+                            value: true,
+                            message: "El campo es requerido"
+                        },
+                        minLength: {
+                            value: 3,
+                            message: "Cantidad minima de caracteres 3"
+                        }
+                    })}
+                    onChange={(e)=>setUsu(e.target.value)} />
+                    {errors.username && <span>{errors.username.message}</span>}
                 </div>
 
                 <label htmlFor="">Contraseña</label>
                 <div className="inputPassword">
                     <input name="passwordd" type="password" id="txtpas" onChange={(e)=>setPas(e.target.value)} className="form-control" {...register('passwordd', {
+                        required: {
+                            value: true,
+                            message: "El campo es requerido"
+                        },
+                        minLength: {
+                            value: 3,
+                            message: "Cantidad minima de caracteres: 3"
+                        }
                     })} />
+                    {errors.passwordd && <span>{errors.passwordd.message}</span>}
                 </div>
 
 
                 <div className="divButton">
                     <input type="submit" className="btn btn-secondary" value="Enviar" onClick={onSubmit}/>
+                    <input type="submit" lassName="btn btn-secondary" value={"validar"} />
                     
                 </div>
                 <Link to={'/register'}>
