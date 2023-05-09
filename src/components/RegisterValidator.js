@@ -12,7 +12,7 @@ import axios from "axios";
             }
         }).then(response => console.log(response.status))
     }catch{
-        console.log("No sirvio pa ni mrda");
+        console.log("No sirvio");
     }
     
 }

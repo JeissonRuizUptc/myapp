@@ -1,5 +1,6 @@
 import axios from "axios";
 
+const response = "";
  const userValidator = (username, password) =>{
     try{
         const response =  axios({
@@ -9,11 +10,11 @@ import axios from "axios";
                 "email": username,
                 "password": password
             }
-        }).then(response => console.log(response.status))
+        })
     }catch{
-        console.log("No sirvio pa ni mrda");
+        console.log("No sirvio");
     }
-    
+    return response.HttpStatusCode;
 }
-
+ 
 export {userValidator};
